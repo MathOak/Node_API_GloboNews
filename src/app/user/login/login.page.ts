@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
     public toastController: ToastController,  
   ) { }
 
-  insertUser(){
+  loginUser(){
     this.authenticateService.loginFirebase(this.email, this.password).then(res => {
       this.router.navigate(['folder/Inbox']);
     }).catch((error) => {
