@@ -27,7 +27,7 @@ export class InsertPage implements OnInit {
     })
   }
 
-  showMessage(){
+  async showMessage(){
     const toast = await this.toastController.create({
       message: this.message,
       duration: 2000

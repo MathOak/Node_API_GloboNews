@@ -10,11 +10,32 @@ import { AuthenticateService } from '../authenticate.service';
 })
 export class LoginPage implements OnInit {
 
+  public email:string="";
+  public password:string="";
+  public message:string="";
+
   constructor(
     public authenticateService: AuthenticateService,
-    public Router: Router,
-    public toastController: ToastController,
+    public router: Router,
+    public toastController: ToastController,  
   ) { }
+
+  insertUser(){
+    this.authenticateService.loginFirebase(this.email, this.password).then(res => {
+      this.router.navigate(['folder/Inbox']);
+    }).catch((error) => {
+      this.message = "E-mail e/ou Senha incorreto(s)";
+      this.showMessage();
+    })
+  }
+
+  async showMessage(){
+    const toast = await this.toastController.create({
+      message: this.message,
+      duration: 2000
+    });
+    toast.present();
+  }
 
   ngOnInit() {
   }
