@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
+import { AuthenticateService } from '../authenticate.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public authenticateService: AuthenticateService,
+    public Router: Router,
+    public toastController: ToastController,
+  ) { }
 
   ngOnInit() {
   }
