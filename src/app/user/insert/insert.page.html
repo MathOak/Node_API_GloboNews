@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>insert</ion-title>
+    <ion-title>Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <form>
+    <br>
+    E-mail: <input type="text" style="background-color: #121212;" name = 'email' [(ngModel)] = "email"><br>
+    Password: <input type="password" style="background-color: #121212;" name = 'password' [(ngModel)] = "password"><br>
+    <input type="submit" style="color: black;" value="Cadastrar" (click)="insertUser()"> Já possui cadastro? <a (click)="redirectLogin()">Faça Login</a>
+  </form>
 </ion-content>

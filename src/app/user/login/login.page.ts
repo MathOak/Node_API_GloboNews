@@ -22,11 +22,15 @@ export class LoginPage implements OnInit {
 
   loginUser(){
     this.authenticateService.loginFirebase(this.email, this.password).then(res => {
-      this.router.navigate(['folder/Inbox']);
+      this.router.navigate(['folder/Home']);
     }).catch((error) => {
-      this.message = "E-mail e/ou Senha incorreto(s)";
+      this.message = "E-mail e/ou Senha incorreto(s)!";
       this.showMessage();
     })
+  }
+
+  redirectInsert(){
+    this.router.navigate(['insert']);
   }
 
   async showMessage(){

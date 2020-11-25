@@ -29,3 +29,6 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+src/app/user/insert/insert.page.html
+src/app/app.component.html
+src/app/user/login/login.page.html

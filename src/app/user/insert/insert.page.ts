@@ -20,11 +20,15 @@ export class InsertPage implements OnInit {
 
   insertUser(){
     this.authenticateService.insertFirebase(this.email, this.password).then(res => {
-      this.router.navigate(['folder/Inbox']);
+      this.router.navigate(['login']);
     }).catch((error) => {
-      this.message = "Erro ao incluir usuário";
+      this.message = "E-mail inválido!";
       this.showMessage();
     })
+  }
+
+  redirectLogin(){
+    this.router.navigate(['login']);
   }
 
   async showMessage(){
