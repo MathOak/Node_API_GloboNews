@@ -30,6 +30,7 @@ export class LoginPage implements OnInit {
   }
 
   redirectInsert(){
+    //Button for redirect to signup page
     this.router.navigate(['insert']);
   }
 
