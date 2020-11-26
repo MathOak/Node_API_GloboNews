@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { AuthenticateService } from './user/authenticate.service';
+import { AuthenticateService } from './services/authenticate.service';
 
 @Component({
   selector: 'app-root',
@@ -49,11 +49,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  logout(){
-    this.authenticateService.logoutFirebase().then(res => {
-      this.router.navigate(['login']);
-    })
-  }
+
 
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
