@@ -29,11 +29,6 @@ export class AppComponent implements OnInit {
       url: '/folder/Map',
       icon: 'map'
     },
-    {
-      title: 'Log-out',
-      url: 'login',
-      icon: 'log-out'
-    }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
@@ -52,6 +47,12 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  logout(){
+    this.authenticateService.logoutFirebase().then(res => {
+      this.router.navigate(['login']);
+    })
   }
 
   ngOnInit() {

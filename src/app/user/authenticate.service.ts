@@ -16,4 +16,8 @@ export class AuthenticateService {
   insertFirebase(email, password) {
     return this. ngFireAuth.createUserWithEmailAndPassword(email, password)
   }
+
+  logoutFirebase(){
+    return this.ngFireAuth.signOut
+  }
 }
