@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { ToastController } from "@ionic/angular"
-import { AuthenticateService } from 'src/app/user/authenticate.service'
+import { AuthenticateService } from 'src/app/services/authenticate.service'
 @Component({
   selector: 'app-insert',
   templateUrl: './insert.page.html',
