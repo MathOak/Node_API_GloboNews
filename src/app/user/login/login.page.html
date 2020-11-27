@@ -6,11 +6,24 @@
 
 <ion-content>
 
-  <form>
+  <!-- <form>
     <br>
     E-mail: <input type="text" style="background-color: #121212;" name = 'email' [(ngModel)] = "email"><br>
     Password: <input type="password" style="background-color: #121212;" name = 'password' [(ngModel)] = "password"><br>
     <input type="submit" style="color: black;" value="Login" (click)="loginUser()"> Não tem cadastro? <a (click)="redirectInsert()">Cadastre-se</a>
+  </form> -->
+
+    <div>
+      <h2 style="text-align: center; margin: 4% auto;">
+        Faça o Seu login (:
+      </h2>
+    </div>
+
+  <form class="login">
+    <input type="text" placeholder="Email" name = 'email' [(ngModel)] = "email">
+    <input type="password" placeholder="Password" name = 'password' [(ngModel)] = "password">
+    <button value="Login" (click)="loginUser()">Login</button>
+    <a (click)="redirectInsert()" style="color: white;">Cadastre-se</a>
   </form>
 
 </ion-content>
