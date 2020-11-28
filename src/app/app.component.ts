@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthenticateService } from './services/authenticate.service';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -37,7 +39,9 @@ export class AppComponent implements OnInit {
     private platform: Platform,
     private splashScreen: SplashScreen,
     public router: Router,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private authService: AuthenticateService,
+    private navCtrl: NavController
   ) {
     this.initializeApp();
   }
@@ -49,12 +53,19 @@ export class AppComponent implements OnInit {
     });
   }
 
-
-
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+
+  logout() {
+    this.authService.logoutUser().then(res => {
+        console.log(res);
+        this.navCtrl.navigateBack('');
+      }).catch(error => {
+        console.log(error);
+      })
   }
 }

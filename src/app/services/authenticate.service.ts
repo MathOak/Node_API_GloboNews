@@ -20,4 +20,18 @@ export class AuthenticateService {
   logoutFirebase(){
     return this.ngFireAuth.signOut
   }
+
+  logoutUser() {
+    return new Promise((resolve, reject) => {
+      if (this.ngFireAuth.currentUser) {
+        this.ngFireAuth.signOut()
+          .then(() => {
+            console.log("LOG Out");
+            resolve();
+          }).catch((error) => {
+            reject();
+          });
+      }
+    })
+  }
 }
