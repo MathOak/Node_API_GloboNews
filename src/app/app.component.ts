@@ -10,6 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
+<<<<<<< Updated upstream
+=======
+  public username:string="";
+>>>>>>> Stashed changes
   public selectedIndex = 0;
   public appPages = [
     {
@@ -28,6 +32,7 @@ export class AppComponent implements OnInit {
       icon: 'heart'
     },
     {
+<<<<<<< Updated upstream
       title: 'Archived',
       url: '/folder/Archived',
       icon: 'archive'
@@ -36,6 +41,16 @@ export class AppComponent implements OnInit {
       title: 'Trash',
       url: '/folder/Trash',
       icon: 'trash'
+=======
+      title: 'Noticias',
+      url: '/folder/News',
+      icon: 'newspaper'
+    },
+    {
+      title: 'Mapa',
+      url: '/folder/Map',
+      icon: 'map'
+>>>>>>> Stashed changes
     },
     {
       title: 'Spam',
@@ -43,8 +58,7 @@ export class AppComponent implements OnInit {
       icon: 'warning'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-
+  
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -59,9 +73,13 @@ export class AppComponent implements OnInit {
       this.splashScreen.hide();
     });
   }
+  logout(){
+    this.router.navigate(['login']);
+  }
 
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
+    console.log(path)
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }

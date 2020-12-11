@@ -3,6 +3,16 @@
 
 /** Ionic CSS Variables **/
 :root {
+<<<<<<< Updated upstream
+=======
+  /** Font **/
+  --ion-font-family: "Antic Slab";
+  --ion-background-color: #6d79ff;
+  --ion-background-color-rgb: 109,121,255;
+  --ion-text-color: #000000;
+  --ion-text-color-rgb: 0,0,0;
+
+>>>>>>> Stashed changes
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -20,7 +30,7 @@
   --ion-color-secondary-tint: #50c8ff;
 
   /** tertiary **/
-  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary: #5261ff;
   --ion-color-tertiary-rgb: 82, 96, 255;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
@@ -59,6 +69,7 @@
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
 
+  
   /** medium **/
   --ion-color-medium: #92949c;
   --ion-color-medium-rgb: 146, 148, 156;
@@ -76,7 +87,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: custom) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -128,8 +139,13 @@
     --ion-color-dark: #f4f5f8;
     --ion-color-dark-rgb: 244,245,248;
     --ion-color-dark-contrast: #000000;
+<<<<<<< Updated upstream
     --ion-color-dark-contrast-rgb: 0,0,0;
     --ion-color-dark-shade: #d7d8da;
+=======
+    --ion-color-dark-contrast-rgb: 0, 0, 0;
+    --ion-color-dark-shade: #061A40;
+>>>>>>> Stashed changes
     --ion-color-dark-tint: #f5f6f9;
 
     --ion-color-medium: #989aa2;
