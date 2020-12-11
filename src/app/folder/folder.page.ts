@@ -1,13 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-<<<<<<< Updated upstream
-=======
-import { ApiService } from '../services/api.service';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
-
-declare var google;
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-folder',
@@ -23,13 +15,6 @@ export class FolderPage implements OnInit {
   longitude: number;
 
   public folder: string;
-<<<<<<< Updated upstream
-
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-=======
   public page:string;
   public isHome:boolean = false;
   public isNews:boolean = false;
@@ -120,7 +105,6 @@ export class FolderPage implements OnInit {
     }else{
       //message not fund
     }
->>>>>>> Stashed changes
   }
 
 }
